@@ -7,4 +7,9 @@ import { Component } from '@angular/core';
 export class AppComponent {
   title =
     'Análise sensorial de preparações funcionais desenvolvidas para escolares entre 09 e 15 anos, do município de Campinas/SP';
+  showingMore = false;
+
+  toggleShowMore() {
+    this.showingMore = !this.showingMore;
+  }
 }
