@@ -102,7 +102,36 @@
       </div>
     </header>
 
-    <section></section>
+    <section class="flex flex-col px-10">
+      <header class="flex justify-between items-start pt-5 gap-6">
+        <h2 class="text-xl font-black text-[#ED7839] break-words max-w-[780px]">
+          {{ title }}
+        </h2>
+        <div class="flex flex-col gap-3">
+          <div class="flex justify-end gap-1 text-white">
+            <button
+              type="button"
+              class="flex gap-1 items-center bg-[#ED7839] rounded px-2 py-1"
+            >
+              <img src="/assets/download.png" alt="Ícone de download" />
+              Download
+            </button>
+            <button type="button" class="bg-[#ED7839] rounded px-2 py-1">
+              <span class="sr-only">Favoritar trabalho</span>
+              <img src="/assets/fav.png" alt="Ícone de favoritar." />
+            </button>
+            <button type="button" class="bg-[#ED7839] rounded px-2 py-1">
+              <span class="sr-only">Acessar DOI do trabalho.</span>
+              <img src="/assets/doi.png" alt="Ícone do DOI." />
+            </button>
+          </div>
+          <span class="uppercase text-sm font-medium text-[#ED7839] text-right">
+            Como citar esse trabalho?
+          </span>
+        </div>
+      </header>
+    </section>
+
     <footer></footer>
   </main>
 </div>
