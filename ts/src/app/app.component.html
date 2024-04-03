@@ -45,13 +45,13 @@
         </div>
 
         <aside
-          class="rounded-sm border border-[#ECECEC] w-[242px] max-h-[423px] h-full overflow-y-auto"
+          class="rounded-sm border border-[#ECECEC] w-[242px] max-h-[423px] h-full"
         >
           <header class="bg-[#FDF1EB] px-4 py-2 border-b border-[#ECECEC]">
             <h3 class="text-xl font-medium text-[#4E4E4E]">Detalhes</h3>
           </header>
           <section
-            class="flex flex-col gap-5 px-3.5 py-4 quicksand text-[#5C5C5C]"
+            class="flex flex-col gap-5 px-3.5 py-4 quicksand text-[#5C5C5C] max-h-[378px] overflow-y-auto"
           >
             <div class="flex flex-col gap-1.5 text-xs">
               <h4 class="leading-[14.4px]">
@@ -97,7 +97,7 @@
         <div
           class="flex flex-col gap-8 p-4 text-sm text-[#5C5C5C] max-w-full break-words leading-relaxed"
         >
-          <p>
+          <p class="max-w-full">
             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus
             vitae turpis auctor, mollis felis ut, commodo turpis. Phasellus
             felis mauris, egestas eget cursus et, iaculis quis lacus. Fusce
@@ -107,8 +107,15 @@
             condimentum lobortis et non lorem. Sed id nisl metus. Quisque
             sollicitudin ligula in sapien scelerisque, ac gravida eros
             vestibulum.
+            <button
+              class="text-sm font-bold text-[#ED7839] btn-show-more"
+              (click)="toggleShowMore()"
+              *ngIf="!showingMore"
+            >
+              ver mais
+            </button>
           </p>
-          <p>
+          <p *ngIf="showingMore">
             Fusce vitae luctus dui. Donec id euismod mauris, in volutpat urna.
             Proin dapibus consequat feugiat. Proin dictum justo arcu, quis
             vestibulum augue lacinia quis. Sed dignissim dui nulla, ut faucibus
@@ -119,7 +126,7 @@
             ipsum pulvinar, pharetra libero non, ornare enim. Etiam in laoreet
             odio.
           </p>
-          <p>
+          <p *ngIf="showingMore">
             Nam eget tristique elit, at fermentum tellus. Mauris scelerisque
             ligula id eleifend feugiat. Donec eleifend vehicula sem nec dapibus.
             Integer scelerisque neque dui, in lacinia erat molestie eu.
@@ -133,7 +140,7 @@
             consectetur lorem vel, interdum sapien. Aenean in porta arcu.
             Maecenas eu maximus massa.
           </p>
-          <p>
+          <p *ngIf="showingMore">
             Praesent velit dolor, dignissim sed quam ac, efficitur porta justo.
             Pellentesque porta pharetra felis ut hendrerit. Nulla facilisi.
             Aliquam erat volutpat. Nunc sit amet faucibus quam. Maecenas dapibus
@@ -142,6 +149,13 @@
             Aliquam erat volutpat. Donec varius ipsum purus, ut vehicula purus
             placerat vitae. Lorem ipsum dolor sit amet, consectetur adipiscing
             elit.
+            <button
+              class="text-sm font-bold text-[#ED7839] btn-show-more"
+              (click)="toggleShowMore()"
+              *ngIf="showingMore"
+            >
+              ver menos
+            </button>
           </p>
         </div>
       </section>
