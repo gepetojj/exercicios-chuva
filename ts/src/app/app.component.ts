@@ -11,6 +11,7 @@ export class AppComponent {
     'Análise sensorial de preparações funcionais desenvolvidas para escolares entre 09 e 15 anos, do município de Campinas/SP';
   showingMore = false;
   commentMode: CommentMode = 'waiting';
+  commentCreated = false;
 
   toggleShowMore() {
     this.showingMore = !this.showingMore;
@@ -18,5 +19,11 @@ export class AppComponent {
 
   changeCommentMode(mode: CommentMode) {
     this.commentMode = mode;
+  }
+
+  onSubmit() {
+    this.commentMode = 'created';
+    this.commentCreated = true;
+    return false;
   }
 }
