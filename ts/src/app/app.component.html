@@ -202,7 +202,7 @@
               autores!
             </span>
           </div>
-          <form action="GET" class="flex flex-col px-4 pb-4">
+          <form (submit)="onSubmit()" class="flex flex-col px-4 pb-4">
             <div class="pb-2">
               <label for="subject" class="text-[#ED7839] font-bold">
                 Assunto
@@ -239,10 +239,89 @@
             </div>
           </form>
           <div class="flex justify-center items-center w-full">
-          <div class="w-[97%] h-[1px] bg-[#E7E7E7]"></div>
+            <div class="w-[97%] h-[1px] bg-[#E7E7E7]"></div>
+          </div>
+        </div>
+
+        <div *ngIf="commentMode === 'created'">
+          <div class="flex flex-col justify-center w-full py-4 gap-4">
+            <h4 class="text-lg font-bold text-[#ED7839] text-center">
+              Seu tópico foi enviado com sucesso! :D
+            </h4>
+            <h5 class="quicksand text-sm text-[#595959] text-center">
+              Agradecemos por sua contribuição, uma notificação será enviada ao
+              seu email assim que seu tópico for respondido!
+            </h5>
+            <a
+              href="#"
+              class="quicksand text-sm text-[#F48F44] font-medium text-center underline pt-4 pb-8"
+            >
+              Descubra outros trabalhos!
+            </a>
+          </div>
+          <div class="flex relative justify-center items-center w-full">
+            <div class="absolute top-[50%] w-[97%] h-[1px] bg-[#E7E7E7]"></div>
+            <button
+              class="flex items-center gap-2 z-10 px-10 py-1 bg-gradient-to-b from-[#FEB254] to-[#F0813D] rounded text-white quicksand font-bold shadow-md btn-create-topic"
+              (click)="changeCommentMode('creating')"
+            >
+              criar novo tópico
+            </button>
+          </div>
         </div>
 
         <ul class="flex flex-col gap-6 px-4 py-4">
+          <li
+            *ngIf="commentCreated"
+            class="flex flex-col relative px-5 py-4 gap-2 shadow-md border border-[#E7E7E7] rounded"
+          >
+            <div
+              class="flex flex-col absolute inset-0 justify-center items-center w-full h-full gap-2 backdrop-blur-sm bg-gray-400/10"
+            >
+              <img src="/assets/submited.png" alt="" />
+              <span class="quicksand font-bold text-[#707070]">
+                Aguardando feedback dos autores
+              </span>
+              <button
+                class="font-[Sagoe_UI] text-[#ED7839] text-sm underline text-center"
+              >
+                Editar tópico
+              </button>
+            </div>
+
+            <div class="flex flex-col">
+              <h5 class="quicksand font-bold text-[#ED7839]">
+                Assunto da pergunta aparece aqui
+              </h5>
+              <span class="quicksand font-medium text-[#5C5C5C] text-xs">
+                Carlos Henrique Santos
+              </span>
+            </div>
+            <p class="quicksand text-sm text-[#4D4D4D]">
+              Comecinho da pergunta aparece aqui resente relato inscreve-se no
+              campo da análise da dimensão e impacto de processo formativo
+              situado impacto de processo formativo processo...
+            </p>
+            <div
+              class="flex items-center gap-4 font-[Sagoe_UI] font-[350] text-[#757575] text-sm"
+            >
+              <div class="invisible">
+                <button>
+                  <span class="sr-only"
+                    >Botão para ver mais informações sobre o tópico.</span
+                  >
+                  <img src="/assets/more-info.png" alt="" />
+                </button>
+                <button class="rounded px-2 py-1.5 bg-[#ED7839] shadow">
+                  <span class="sr-only">Botão para dar like no tópico.</span>
+                  <img src="/assets/heart.png" alt="" />
+                </button>
+                <span>1 like</span>
+                <span>1 resposta</span>
+              </div>
+            </div>
+          </li>
+
           <li
             class="flex flex-col px-5 py-4 gap-2 shadow-md border border-[#E7E7E7] rounded"
           >
