@@ -1,0 +1,78 @@
+<header class="flex justify-between items-start pt-5 gap-6">
+  <h2 class="text-xl font-black text-[#ED7839] break-words max-w-[780px]">
+    {{ title }}
+  </h2>
+  <div class="flex flex-col gap-3">
+    <div class="flex justify-end gap-1 text-white">
+      <button
+        type="button"
+        class="flex gap-1 items-center bg-[#ED7839] rounded px-3 py-1"
+      >
+        <img src="/assets/download.png" alt="Ícone de download" />
+        Download
+      </button>
+      <button type="button" class="bg-[#ED7839] rounded px-3 py-1">
+        <span class="sr-only">Favoritar trabalho</span>
+        <img src="/assets/fav.png" alt="Ícone de favoritar." />
+      </button>
+      <button type="button" class="bg-[#ED7839] rounded px-3 py-1">
+        <span class="sr-only">Acessar DOI do trabalho.</span>
+        <img src="/assets/doi.png" alt="Ícone do DOI." />
+      </button>
+    </div>
+    <span class="uppercase text-sm font-medium text-[#ED7839] text-right">
+      Como citar esse trabalho?
+    </span>
+  </div>
+</header>
+
+<section class="flex gap-10 justify-between 2xl:justify-center items-start">
+  <div>
+    <img
+      src="/assets/video.png"
+      alt="Imagem simbolizando um player de vídeo."
+      class="max-h-[423px]"
+    />
+  </div>
+
+  <aside
+    class="rounded-sm border border-[#ECECEC] w-[242px] max-h-[423px] h-full"
+  >
+    <header class="bg-[#FDF1EB] px-4 py-2 border-b border-[#ECECEC]">
+      <h3 class="text-xl font-medium text-[#4E4E4E]">Detalhes</h3>
+    </header>
+    <section
+      class="flex flex-col gap-5 px-3.5 py-4 quicksand text-[#5C5C5C] max-h-[378px] overflow-y-auto"
+    >
+      <div class="flex flex-col gap-1.5 text-xs">
+        <h4 class="leading-[14.4px]">
+          Tipo de apresentação: <strong>Pôster</strong>
+        </h4>
+        <h4 class="leading-[14.4px]">
+          Eixo temático: <strong>Alimentação e saúde (AS)</strong>
+        </h4>
+        <h4 class="leading-[14.4px]">
+          Palavras-chave:
+          <strong>Alimentos funcionais, alimentação escolar.</strong>
+        </h4>
+      </div>
+
+      <div>
+        <h3 class="text-sm font-bold">Autores:</h3>
+        <div class="flex flex-col text-xs pt-1">
+          <span>Galileo Galilei<sup>1</sup></span>
+          <span>Berta Lange de Morretes<sup>2</sup></span>
+          <span>Isaac Newton<sup>3</sup></span>
+          <span>Cesar Lattes<sup>1</sup></span>
+          <span>Stephen Hawking<sup>4</sup></span>
+        </div>
+        <div class="flex flex-col text-xs text-[#ADA0A0] pt-8 pb-2">
+          <span><sup>1</sup>Universidade Estadual de Campinas</span>
+          <span><sup>2</sup>Universidade de São Paulo</span>
+          <span> <sup>3</sup>Instituto Nacional de Pesquisas Espaciais </span>
+          <span><sup>4</sup>Universidade Federal do Rio de Janeiro</span>
+        </div>
+      </div>
+    </section>
+  </aside>
+</section>
