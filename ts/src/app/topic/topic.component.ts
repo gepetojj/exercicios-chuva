@@ -6,6 +6,8 @@ import { Component, Input, OnInit } from '@angular/core';
 })
 export class TopicComponent implements OnInit {
   @Input() isWaiting: boolean = false;
+  @Input() hasResponse: boolean = false;
+
   constructor() {}
   isOpen = false;
 

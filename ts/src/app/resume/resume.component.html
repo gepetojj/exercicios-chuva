@@ -14,13 +14,13 @@
       Phasellus condimentum orci id leo condimentum lobortis et non lorem. Sed
       id nisl metus. Quisque sollicitudin ligula in sapien scelerisque, ac
       gravida eros vestibulum.
-      <button
+      <a
         class="text-sm font-bold text-[#ED7839] btn-show-more"
         (click)="toggleShowMore()"
         *ngIf="!showingMore"
       >
         ver mais
-      </button>
+      </a>
     </p>
     <p *ngIf="showingMore">
       Fusce vitae luctus dui. Donec id euismod mauris, in volutpat urna. Proin
@@ -53,13 +53,13 @@
       nec, iaculis dictum sem. Aliquam at malesuada arcu. Aliquam erat volutpat.
       Donec varius ipsum purus, ut vehicula purus placerat vitae. Lorem ipsum
       dolor sit amet, consectetur adipiscing elit.
-      <button
+      <a
         class="text-sm font-bold text-[#ED7839] btn-show-more"
         (click)="toggleShowMore()"
         *ngIf="showingMore"
       >
         ver menos
-      </button>
+      </a>
     </p>
   </div>
 </section>

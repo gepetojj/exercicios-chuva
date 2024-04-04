@@ -1,7 +1,9 @@
 <li
   *ngIf="!isWaiting"
   role="button"
-  class="flex flex-col shadow-md answered-topic rounded-b"
+  class="flex flex-col shadow-md rounded-b {{
+    hasResponse ? 'answered-topic' : ''
+  }}"
 >
   <div
     class="flex flex-col px-5 py-4 gap-2 border border-[#E7E7E7] cursor-pointer {{
@@ -25,24 +27,24 @@
     <div
       class="flex items-center gap-4 font-[Sagoe_UI] font-[350] text-[#757575] text-sm"
     >
-      <button>
+      <a href="#">
         <span class="sr-only">
           Botão para ver mais informações sobre o tópico.
         </span>
         <img src="/assets/more-info.png" alt="" />
-      </button>
-      <button class="rounded px-2 py-1.5 bg-[#ED7839] shadow">
+      </a>
+      <a href="#" class="rounded px-2 py-1.5 bg-[#ED7839] shadow">
         <span class="sr-only">Botão para dar like no tópico.</span>
         <img src="/assets/heart.png" alt="" />
-      </button>
+      </a>
       <span>1 like</span>
-      <span>4 respostas</span>
+      <span>{{ hasResponse ? "4" : "0" }} respostas</span>
     </div>
   </div>
 
   <ul
-    *ngIf="isOpen"
-    class="flex flex-col border-x border-[#E7E7E7] quicksand rounded-b"
+    *ngIf="hasResponse && isOpen"
+    class="flex flex-col border-x border-[#E7E7E7] quicksand rounded-b comments-container"
   >
     <li
       class="flex flex-col gap-2 px-6 py-3 border-b border-[#E7E7E7] bg-[#F8F8F8]"
