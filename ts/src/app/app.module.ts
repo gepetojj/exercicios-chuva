@@ -5,9 +5,10 @@ import { AppComponent } from './app.component';
 import { SidebarComponent } from './sidebar/sidebar.component';
 import { HeaderComponent } from './header/header.component';
 import { ArticleComponent } from './article/article.component';
+import { ResumeComponent } from './resume/resume.component';
 
 @NgModule({
-  declarations: [AppComponent, SidebarComponent, HeaderComponent, ArticleComponent],
+  declarations: [AppComponent, SidebarComponent, HeaderComponent, ArticleComponent, ResumeComponent],
   imports: [BrowserModule],
   providers: [],
   bootstrap: [AppComponent],
