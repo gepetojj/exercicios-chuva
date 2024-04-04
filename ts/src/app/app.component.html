@@ -166,29 +166,79 @@
         <header class="bg-[#FDF1EB] px-4 py-2 border-b border-[#ECECEC]">
           <h3 class="text-xl font-medium text-[#4E4E4E]">Discussões</h3>
         </header>
-        <div class="flex flex-col justify-center w-full py-4 gap-6">
-          <h4 class="text-lg font-bold text-[#ED7839] text-center">
-            Compartilhe suas ideias ou dúvidas com os autores!
-          </h4>
-          <div class="flex justify-center items-center gap-14 w-full">
-            <img src="/assets/dis-icon1.png" alt="" />
-            <img src="/assets/dis-icon2.png" alt="" />
-            <img src="/assets/dis-icon3.png" alt="" />
+
+        <div *ngIf="commentMode === 'waiting'">
+          <div class="flex flex-col justify-center w-full py-4 gap-6">
+            <h4 class="text-lg font-bold text-[#ED7839] text-center">
+              Compartilhe suas ideias ou dúvidas com os autores!
+            </h4>
+            <div class="flex justify-center items-center gap-14 w-full">
+              <img src="/assets/dis-icon1.png" alt="" />
+              <img src="/assets/dis-icon2.png" alt="" />
+              <img src="/assets/dis-icon3.png" alt="" />
+            </div>
+            <h5 class="quicksand text-sm text-[#595959] text-center">
+              Sabia que o maior estímulo no desenvolvimento científico e
+              cultural é a curiosidade? Deixe seus <br />
+              questionamentos ou sugestões para o autor!
+            </h5>
           </div>
-          <h5 class="quicksand text-sm text-[#595959] text-center">
-            Sabia que o maior estímulo no desenvolvimento científico e cultural
-            é a curiosidade? Deixe seus <br />
-            questionamentos ou sugestões para o autor!
-          </h5>
+          <div class="flex relative justify-center items-center w-full">
+            <div class="absolute top-[50%] w-[97%] h-[1px] bg-[#E7E7E7]"></div>
+            <button
+              class="flex items-center gap-2 z-10 px-3 py-1 bg-gradient-to-b from-[#FEB254] to-[#F0813D] rounded text-white quicksand font-bold shadow-lg btn-create-topic"
+              (click)="changeCommentMode('creating')"
+            >
+              <img src="/assets/create.png" alt="" />
+              criar tópico
+            </button>
+          </div>
         </div>
-        <div class="flex relative justify-center items-center w-full">
-          <div class="absolute top-[50%] w-[97%] h-[1px] bg-[#E7E7E7]"></div>
-          <button
-            class="flex items-center gap-2 z-10 px-3 py-1 bg-gradient-to-b from-[#FEB254] to-[#F0813D] rounded text-white quicksand font-bold shadow-lg"
-          >
-            <img src="/assets/create.png" alt="" />
-            criar tópico
-          </button>
+
+        <div *ngIf="commentMode === 'creating'">
+          <div class="flex flex-col justify-center w-full py-4 gap-6">
+            <span class="quicksand text-sm text-[#595959] text-center">
+              Tem uma dúvida ou sugestão? Compartilhe seu feedback com os
+              autores!
+            </span>
+          </div>
+          <form action="GET" class="flex flex-col px-4 pb-4">
+            <div class="pb-2">
+              <label for="subject" class="text-[#ED7839] font-bold">
+                Assunto
+              </label>
+              <input
+                id="subject"
+                name="subject"
+                type="text"
+                placeholder="Defina um tópico sucinto para notificar os autores..."
+                class="quicksand text-sm rounded border border-[#CCCCCC] w-full px-5 py-1.5 outline-none"
+              />
+            </div>
+            <div class="flex flex-col">
+              <label for="content" class="text-[#ED7839] font-bold">
+                Conteúdo
+              </label>
+              <textarea
+                id="content"
+                name="content"
+                class="quicksand text-sm rounded-t border border-[#CCCCCC] w-full px-5 py-1.5 outline-none"
+                rows="4"
+              ></textarea>
+            </div>
+            <div class="flex w-full h-[31px]">
+              <div
+                class="w-full h-full bg-[#EAF1F2] border border-[#CCCCCC] border-t-0 rounded-bl"
+              ></div>
+              <button
+                type="submit"
+                class="h-full bg-gradient-to-b from-[#FEB154] to-[#F1833E] text-white font-bold quicksand px-16 rounded-br"
+              >
+                Enviar
+              </button>
+            </div>
+          </form>
+          <div class="w-[97%] h-[1px] bg-[#E7E7E7]"></div>
         </div>
       </section>
     </section>
