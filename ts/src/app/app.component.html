@@ -186,7 +186,7 @@
           <div class="flex relative justify-center items-center w-full">
             <div class="absolute top-[50%] w-[97%] h-[1px] bg-[#E7E7E7]"></div>
             <button
-              class="flex items-center gap-2 z-10 px-3 py-1 bg-gradient-to-b from-[#FEB254] to-[#F0813D] rounded text-white quicksand font-bold shadow-lg btn-create-topic"
+              class="flex items-center gap-2 z-10 px-3 py-1 bg-gradient-to-b from-[#FEB254] to-[#F0813D] rounded text-white quicksand font-bold shadow-md btn-create-topic"
               (click)="changeCommentMode('creating')"
             >
               <img src="/assets/create.png" alt="" />
@@ -240,6 +240,75 @@
           </form>
           <div class="w-[97%] h-[1px] bg-[#E7E7E7]"></div>
         </div>
+
+        <ul class="flex flex-col gap-6 px-4 py-4">
+          <li
+            class="flex flex-col px-5 py-4 gap-2 shadow-md border border-[#E7E7E7] rounded"
+          >
+            <div class="flex flex-col">
+              <h5 class="quicksand font-bold text-[#ED7839]">
+                Assunto da pergunta aparece aqui
+              </h5>
+              <span class="quicksand font-medium text-[#5C5C5C] text-xs">
+                Carlos Henrique Santos
+              </span>
+            </div>
+            <p class="quicksand text-sm text-[#4D4D4D]">
+              Comecinho da pergunta aparece aqui resente relato inscreve-se no
+              campo da análise da dimensão e impacto de processo formativo
+              situado impacto de processo formativo processo...
+            </p>
+            <div
+              class="flex items-center gap-4 font-[Sagoe_UI] font-[350] text-[#757575] text-sm"
+            >
+              <button>
+                <span class="sr-only"
+                  >Botão para ver mais informações sobre o tópico.</span
+                >
+                <img src="/assets/more-info.png" alt="" />
+              </button>
+              <button class="rounded px-2 py-1.5 bg-[#ED7839] shadow">
+                <span class="sr-only">Botão para dar like no tópico.</span>
+                <img src="/assets/heart.png" alt="" />
+              </button>
+              <span>1 like</span>
+              <span>1 resposta</span>
+            </div>
+          </li>
+          <li
+            class="flex flex-col px-5 py-4 gap-2 shadow-md border border-[#E7E7E7] rounded"
+          >
+            <div class="flex flex-col">
+              <h5 class="quicksand font-bold text-[#ED7839]">
+                Assunto da pergunta aparece aqui
+              </h5>
+              <span class="quicksand font-medium text-[#5C5C5C] text-xs">
+                Carlos Henrique Santos
+              </span>
+            </div>
+            <p class="quicksand text-sm text-[#4D4D4D]">
+              Comecinho da pergunta aparece aqui resente relato inscreve-se no
+              campo da análise da dimensão e impacto de processo formativo
+              situado impacto de processo formativo processo...
+            </p>
+            <div
+              class="flex items-center gap-4 font-[Sagoe_UI] font-[350] text-[#757575] text-sm"
+            >
+              <button>
+                <span class="sr-only"
+                  >Botão para ver mais informações sobre o tópico.</span
+                >
+                <img src="/assets/more-info.png" alt="" />
+              </button>
+              <button class="rounded px-2 py-1.5 bg-[#ED7839] shadow">
+                <span class="sr-only">Botão para dar like no tópico.</span>
+                <img src="/assets/heart.png" alt="" />
+              </button>
+              <span>1 like</span>
+              <span>1 resposta</span>
+            </div>
+          </li>
+        </ul>
       </section>
     </section>
 
